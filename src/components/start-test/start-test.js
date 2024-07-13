@@ -70,6 +70,10 @@ export default function StartTest() {
     setCurrentQueIndex(currentQueIndex + 1);
   }
 
+  function handlePrevious(){
+    setCurrentQueIndex(currentQueIndex - 1);
+  }
+
   //  when test submitted will be true on submit last question
   // this mui modal will get open
   if (isTestSubmitted) {
@@ -111,11 +115,20 @@ export default function StartTest() {
               </div>
             ))}
           </div>
-          <CustomButton
+          <div className={styles.buttonGroup}>
+          {currentQueIndex !== 0 && (
+            <CustomButton 
+            customStyle={styles.btnText}
+            btnText={"Previous"}
+            handlerFunction={handlePrevious}
+            />
+          )}
+            <CustomButton
             customStyle={styles.btnText}
             btnText={currentQueIndex === 4 ? "Submit" : "Next"}
             handlerFunction={handleClickNext}
           />
+          </div>
         </div>
         <div className={styles.rightSec}>
           {supportImage && <img src={newton} className={styles.supportImage} />}

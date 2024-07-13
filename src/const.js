@@ -6,6 +6,11 @@ const SUBJECTS = [
     'physics',
     'chemistry',
 ]
+const COURSE= [
+  'm.tech',
+  'pharma',
+  'b.tech',
+]
 const QUESTIONS_BY_SUBJECT = {
     'physics' : [
         {
@@ -38,7 +43,7 @@ const QUESTIONS_BY_SUBJECT = {
             "question" : 'What is the name if the scientist ?',
             "options": ["J. J. Thomson", "Albert Einstein", "Galileo Galilei", "Niels Bohr"],
             "correctAns": "Albert Einstein",
-            "supportImage" : albert 
+            "supportImage" : albert
         }
       ],
       'maths' : [
@@ -110,6 +115,7 @@ const QUESTIONS_BY_SUBJECT = {
 }
 
 export {
+    COURSE,
     SUBJECTS,
     QUESTIONS_BY_SUBJECT
 }
